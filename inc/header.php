@@ -15,7 +15,7 @@
         <?php if(!isset($_SESSION['auth'])) :?>
         <a class="nav-link" href="incription.php">Inscription</a>
         <a class="nav-link" href="connexion.php">Connexion</a>
-        <?php elseif(if(isset($_SESSION['auth']))): ?>
+        <?php elseif(isset($_SESSION['auth'])): ?>
         <a class="nav-link active" href="logout.php">Se déconnecter</a>
         <?php endif; ?>
         <a class="nav-link" href="contact.php">Contact</a>
