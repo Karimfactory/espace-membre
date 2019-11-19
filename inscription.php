@@ -6,7 +6,7 @@ include'inc/header.php';
 	{
 		echo "Une adresse valide stp...";
 
-		else if (!empty($_POST['password']) && !empty($_POST['confirm_password']) && $_POST['password'] = $_POST['confirm_password'])
+		if (!empty($_POST['password']) && !empty($_POST['confirm_password']) && $_POST['password'] = $_POST['confirm_password'])
 			{
 				$req = $pdo->prepare('INSERT INTO users WHERE email = $_POST['email'] AND password = $_POST['password'] VALUES (?,?);');
 				$req->execute([$_POST['email'],$_POST['password']]);
